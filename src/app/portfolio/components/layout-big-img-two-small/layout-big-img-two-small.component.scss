@@ -1,0 +1,41 @@
+:host{
+  .wrapper{
+    &.right{
+      flex-direction: row-reverse;
+    }
+    & > ion-row{
+      &:first-child{
+        width: 66%;
+        img{
+          height: 37.91vw;
+        }
+      }
+      &:last-child{
+        width: 34%;
+        flex-direction: column;
+        img{
+          height: 18.96vw;
+        }
+      }
+      img{
+        width: 100%;
+        object-fit: cover;
+        cursor: zoom-in;
+      }
+    }
+  }
+  @media (max-width: 600px) {
+    .wrapper{
+      & > ion-row{
+        &:first-child, &:last-child{
+          width: 100%;
+          img, video{
+            width: 100vw;
+            height: 56.25vw;
+          }
+        }
+      }
+    }
+  }
+}
+

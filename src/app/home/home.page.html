@@ -1,0 +1,120 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <app-header></app-header>
+</ion-header>
+
+<ion-content [fullscreen]="true"
+             [scrollEvents]="true"
+             (ionScroll)="scroll.logScrolling($event)"
+             color="primary">
+  <app-contact-btn></app-contact-btn>
+<app-scroll-to-top-btn [content]="content"></app-scroll-to-top-btn>
+  <main>
+    <ion-row id="marker"></ion-row>
+  <section class="header">
+    <ion-row class="video-wrapper">
+      <video muted class="video-background" autoplay loop plays-inline>
+        <source src="./assets/video/main.mp4" type='video/mp4'>
+        <source type="video/webm" src="./assets/video/main.webm">
+        <source type="video/mp4" src="./assets/video/main.m4v">
+        <source type="video/ogg" src="./assets/video/main.ogv">
+      </video>
+      <ion-row class="video-overlay"></ion-row>
+    </ion-row>
+
+    <ion-row class="header-overlay">
+      <ion-row>
+        <h1><span>Video production studio.</span></h1>
+        <h2><span>We produce B2B infographic, motion design, corporate videos, stage visuals and video content for your events.</span></h2>
+        <h2><span>info@legion-studio.com</span></h2>
+      </ion-row>
+    </ion-row>
+
+  </section>
+  <section class="portfolio" id="portfolio">
+    <ion-grid class="ion-no-padding">
+      <ion-row>
+        <ion-col>
+          <ion-item class="full-width" (click)="goProject('revlab')">
+            <ion-row class="item-overlay">
+              <p>view project</p>
+            </ion-row>
+            <img src="/assets/images/portfolio/revlab.jpg">
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item class="full-width" (click)="goProject('betonchart')">
+            <ion-row class="item-overlay">
+              <p>view project</p>
+<!--              <ion-icon name="link-sharp"></ion-icon>-->
+            </ion-row>
+            <img src="/assets/images/portfolio/betonchart.jpg">
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item class="full-width" (click)="goProject('tawazun')">
+            <ion-row class="item-overlay">
+              <p>view project</p>
+<!--              <ion-icon name="link-sharp"></ion-icon>-->
+            </ion-row>
+            <img src="/assets/images/portfolio/tawazun.jpg">
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item class="full-width" (click)="goProject('memory')">
+            <ion-row class="item-overlay">
+              <p>view project</p>
+<!--              <ion-icon name="link-sharp"></ion-icon>-->
+            </ion-row>
+            <img src="/assets/images/portfolio/memory.jpg">
+          </ion-item>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-item class="full-width" (click)="goProject('moi')">
+            <ion-row class="item-overlay">
+              <p>view project</p>
+<!--              <ion-icon name="link-sharp"></ion-icon>-->
+            </ion-row>
+            <img src="/assets/images/portfolio/moi.jpg">
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item class="full-width" (click)="goProject('tti')">
+            <ion-row class="item-overlay">
+              <p>view project</p>
+<!--              <ion-icon name="link-sharp"></ion-icon>-->
+            </ion-row>
+            <img src="/assets/images/portfolio/tti.jpg">
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item class="full-width" (click)="goProject('rokoko')">
+            <ion-row class="item-overlay">
+              <p>view project</p>
+<!--              <ion-icon name="link-sharp"></ion-icon>-->
+            </ion-row>
+            <img src="/assets/images/portfolio/rococo.jpg">
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item class="full-width" (click)="goProject('intros')">
+            <ion-row class="item-overlay">
+              <p>view project</p>
+<!--              <ion-icon name="link-sharp"></ion-icon>-->
+            </ion-row>
+            <img src="/assets/images/portfolio/intros.jpg">
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </section>
+  <section class="invitation">
+    <ion-row class="ion-justify-content-center ion-align-items-center">
+      <h3>Let's Work Together :)</h3>
+    </ion-row>
+
+  </section>
+<app-footer></app-footer>
+</main>
+</ion-content>

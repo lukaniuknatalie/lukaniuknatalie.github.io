@@ -1,0 +1,33 @@
+:host{
+  .description-block{
+    justify-content: center;
+    height: 28.52vh;
+    align-items: center;
+    .wrapper{
+      width: 45%;
+      height: max-content;
+      ion-row{
+        justify-content: space-between;
+        width: 100%;
+        p{
+          font-size: 15px;
+          &:first-child{
+            font-weight: 700;
+          }
+          &:last-child{
+            width: 65%;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 800px){
+    .description-block{
+      height: auto;
+      .wrapper{
+        width: 90%;
+      }
+    }
+  }
+}

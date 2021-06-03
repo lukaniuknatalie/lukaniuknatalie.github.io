@@ -1,0 +1,65 @@
+:host{
+  main{
+    .decorative-header{
+      background-image: url("/assets/images/portfolio/tawazun/6.jpg");
+      background-position: bottom;
+    }
+    .samples-presentation{
+      .wrapper{
+        &.right{
+          flex-direction: row-reverse;
+        }
+        & > ion-row{
+          &:first-child{
+            width: 66%;
+            img{
+              height: 37.91vw;
+            }
+            video{
+              width: 66vw;
+            }
+          }
+          &:last-child{
+            width: 34%;
+            flex-direction: column;
+            ion-img{
+              height: 18.96vw;
+            }
+            video{
+              width: 34vw;
+            }
+          }
+          img{
+            width: 100%;
+            object-fit: cover;
+            cursor: zoom-in;
+          }
+          video{
+            object-fit: cover;
+            cursor: zoom-in;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 600px){
+    main{
+      .decorative-header{
+        background-image: url("/assets/images/portfolio/tawazun/6-small.jpg");
+      }
+      .samples-presentation{
+        .wrapper{
+          & > ion-row{
+            &:first-child, &:last-child{
+              width: 100%;
+              img, video{
+                width: 100vw;
+                height: 56.25vw;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

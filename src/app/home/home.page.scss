@@ -1,0 +1,206 @@
+:host{
+  ion-content{
+    main{
+      .header{
+        height: 56.25vw;
+        max-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .video-wrapper{
+          position: absolute;
+          top: 0;
+          left: 0;
+          .video-background{
+            z-index: 1;
+            width: 100vw;
+          }
+          .video-overlay{
+            background-image: url(/assets/images/grid.png);
+            background-color: rgba(0,0,0,0.25);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            z-index: 10;
+          }
+        }
+        .header-overlay{
+          width: 60%;
+          flex-direction: column;
+          z-index: 10;
+          & > ion-row{
+            max-width: 770px;
+            padding: 1vw;
+          }
+          h1{
+            color: white;
+            font-weight: 700;
+            //text-shadow: 0 0 20px black;
+            span{
+              background: url(/assets/images/black-bg.png);
+              background-repeat: no-repeat;
+              background-size: 98% 55%;
+              background-position: bottom;
+              line-height: normal;
+            }
+          }
+          h2{
+            //max-width: 770px;
+            font-weight: 700;
+            &:nth-of-type(2){
+              color: white;
+            }
+            span{
+              background: url(/assets/images/black-bg.png);
+              background-repeat: no-repeat;
+              background-size: 100% 55%;
+              background-position: bottom;
+              line-height: normal;
+            }
+          }
+        }
+      }
+      .portfolio{
+        ion-col{
+          height: 25vw;
+          ion-item{
+            position: relative;
+            cursor: pointer;
+            z-index: 25;
+            height: 100%;
+            &::part(native){
+              height: 100%;
+            }
+            img{
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              z-index: 1;
+            }
+            .item-overlay{
+              width: 100%;
+              height: 100%;
+              position: absolute;
+              background-color: rgba(0,0,0,0);
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-direction: column;
+              z-index: 10;
+              opacity: 0;
+              transition: opacity 300ms ease-in-out, background-color 300ms ease-in-out;
+              p{
+                color: var(--ion-color-primary-contrast);
+                font-size: 3rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                text-align: center;
+                margin-bottom: 17px;
+              }
+            }
+            &:hover{
+              .item-overlay{
+                opacity: 1;
+                background-color: rgba(0,0,0,0.5);
+              }
+            }
+          }
+        }
+      }
+      .invitation{
+        & > ion-row{
+          height: 95px;
+          h3{
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 1220px){
+    ion-content{
+      main{
+        .header{
+          .header-overlay{
+            width: 80%;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 950px){
+    ion-content{
+      main{
+        .header{
+          .header-overlay{
+            //width: 80%;
+            & > ion-row{
+              h1{
+                font-size: 2rem;
+              }
+              h2{
+                font-size: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 600px){
+    ion-content{
+      main{
+        .header{
+          height: 100vh;
+          .video-wrapper{
+            .video-background{
+              height: 100vh;
+              width: auto;
+            }
+          }
+          .header-overlay{
+            width: 95%;
+            & > ion-row{
+              h1{
+                font-size: 3rem;
+              }
+              h2{
+                font-size: 1.5rem;
+              }
+            }
+          }
+        }
+        .portfolio{
+          ion-col{
+            height: 100vw;
+            ion-item{
+              min-width: 100vw;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 350px) {
+    ion-content{
+      main{
+        .header{
+          .header-overlay{
+            & > ion-row{
+              h1{
+                font-size: 2rem;
+              }
+              h2{
+                font-size: 1.1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

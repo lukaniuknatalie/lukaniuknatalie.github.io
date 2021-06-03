@@ -1,0 +1,99 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <app-header></app-header>
+</ion-header>
+
+<ion-content [fullscreen]="true"
+             [scrollEvents]="true"
+             (ionScroll)="scroll.logScrolling($event)"
+             color="primary">
+  <app-contact-btn></app-contact-btn>
+  <app-scroll-to-top-btn [content]="content"></app-scroll-to-top-btn>
+  <main>
+    <ion-row id="marker"></ion-row>
+    <ion-row class="decorative-header"></ion-row>
+    <app-client-description project="tawazun"></app-client-description>
+    <section class="samples-presentation">
+      <ion-row class="wrapper">
+        <ion-row>
+          <video muted class="video" autoplay loop plays-inline (click)="images.openFullVideo('./assets/images/portfolio/tawazun/vid/12.mp4')">
+            <source src="./assets/images/portfolio/tawazun/vid/12.mp4" type='video/mp4'>
+<!--            <source type="video/webm" src="./assets/video/main.webm">-->
+<!--            <source type="video/mp4" src="./assets/video/main.m4v">-->
+<!--            <source type="video/ogg" src="./assets/video/main.ogv">-->
+          </video>
+        </ion-row>
+        <ion-row>
+          <video muted class="video" autoplay loop plays-inline (click)="images.openFullVideo('./assets/images/portfolio/tawazun/vid/11.mp4')">
+            <source src="./assets/images/portfolio/tawazun/vid/11.mp4" type='video/mp4'>
+            <!--            <source type="video/webm" src="./assets/video/main.webm">-->
+            <!--            <source type="video/mp4" src="./assets/video/main.m4v">-->
+            <!--            <source type="video/ogg" src="./assets/video/main.ogv">-->
+          </video>
+          <img button
+               [src]="port.images.tawazun.smallImg[12]"
+               (click)="this.images.fullView('tawazun', 12)">
+        </ion-row>
+      </ion-row>
+      <ion-row class="wrapper right">
+        <ion-row>
+          <video muted class="video" autoplay loop plays-inline (click)="images.openFullVideo('./assets/images/portfolio/tawazun/vid/1.mp4')">
+            <source src="./assets/images/portfolio/tawazun/vid/1.mp4" type='video/mp4'>
+            <!--            <source type="video/webm" src="./assets/video/main.webm">-->
+            <!--            <source type="video/mp4" src="./assets/video/main.m4v">-->
+            <!--            <source type="video/ogg" src="./assets/video/main.ogv">-->
+          </video>
+        </ion-row>
+        <ion-row>
+          <img button
+               [src]="port.images.tawazun.smallImg[9]"
+               (click)="this.images.fullView('tawazun', 9)">
+          <img button
+               [src]="port.images.tawazun.smallImg[8]"
+               (click)="this.images.fullView('tawazun', 8)">
+        </ion-row>
+      </ion-row>
+      <ion-row class="wrapper">
+        <ion-row>
+          <video muted class="video" autoplay loop plays-inline button (click)="images.openFullVideo('./assets/images/portfolio/tawazun/vid/5.mp4')">
+            <source src="./assets/images/portfolio/tawazun/vid/5.mp4" type='video/mp4'>
+            <!--            <source type="video/webm" src="./assets/video/main.webm">-->
+            <!--            <source type="video/mp4" src="./assets/video/main.m4v">-->
+            <!--            <source type="video/ogg" src="./assets/video/main.ogv">-->
+          </video>
+        </ion-row>
+        <ion-row>
+          <img button
+               [src]="port.images.tawazun.smallImg[7]"
+               (click)="this.images.fullView('tawazun', 7)">
+          <img button
+               [src]="port.images.tawazun.smallImg[5]"
+               (click)="this.images.fullView('tawazun', 5)">
+        </ion-row>
+      </ion-row>
+      <ion-row class="wrapper right">
+        <ion-row>
+          <img *ngIf="viewportWidth > 600" button
+               [src]="port.images.tawazun.largeImg[3]"
+               (click)="this.images.fullView('tawazun', 3)">
+          <img *ngIf="viewportWidth <= 600" button
+               [src]="port.images.tawazun.smallImg[3]"
+               (click)="this.images.fullView('tawazun', 3)">
+        </ion-row>
+        <ion-row>
+          <img button
+               [src]="port.images.tawazun.smallImg[6]"
+               (click)="this.images.fullView('tawazun', 6)">
+          <img button
+               [src]="port.images.tawazun.smallImg[2]"
+               (click)="this.images.fullView('tawazun', 2)">
+        </ion-row>
+      </ion-row>
+    </section>
+
+    <app-projects-navigation currentProject="tawazun"></app-projects-navigation>
+    <app-footer></app-footer>
+  </main>
+
+
+
+</ion-content>

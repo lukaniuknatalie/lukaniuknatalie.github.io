@@ -1,0 +1,80 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <app-header></app-header>
+</ion-header>
+
+<ion-content [fullscreen]="true"
+             [scrollEvents]="true"
+             (ionScroll)="scroll.logScrolling($event)"
+             color="primary">
+  <app-contact-btn></app-contact-btn>
+  <app-scroll-to-top-btn [content]="content"></app-scroll-to-top-btn>
+  <main>
+    <ion-row id="marker"></ion-row>
+    <ion-row class="decorative-header"></ion-row>
+    <app-client-description project="fractal"></app-client-description>
+    <app-layout-big-img image="/assets/images/portfolio/moi/gif/6.gif" *ngIf="viewportWidth <= 600"></app-layout-big-img>
+    <ng-container *ngIf="viewportWidth <= 600">
+      <app-layout-big-img image="/assets/images/portfolio/moi/7-small.jpg"></app-layout-big-img>
+      <app-layout-big-img image="/assets/images/portfolio/moi/8-small.jpg"></app-layout-big-img>
+      <app-layout-big-img image="/assets/images/portfolio/moi/1-small.jpg"></app-layout-big-img>
+      <app-layout-big-img image="/assets/images/portfolio/moi/9-small.jpg"></app-layout-big-img>
+    </ng-container>
+    <ion-row class="layout-five-images" *ngIf="viewportWidth > 600">
+      <img button
+           [src]="port.images.fractal.largeImg[1]"
+           (click)="this.images.openFullViewWithFullHeight('/assets/images/portfolio/moi/2.jpg', true)">
+      <img button
+           [src]="port.images.fractal.largeImg[2]"
+           (click)="this.images.openFullViewWithFullHeight('/assets/images/portfolio/moi/3.jpg', true)">
+      <img button [src]="port.images.fractal.largeImg[3]"
+           (click)="this.images.openFullViewWithFullHeight('/assets/images/portfolio/moi/4.jpg', true)">
+      <img button [src]="port.images.fractal.largeImg[4]"
+           (click)="this.images.openFullViewWithFullHeight('/assets/images/portfolio/moi/5.jpg', true)">
+      <img button [src]="port.images.fractal.largeImg[5]"
+           (click)="this.images.openFullViewWithFullHeight('/assets/images/portfolio/moi/6.jpg', true)">
+    </ion-row>
+    <ion-row class="layout-five-images" *ngIf="viewportWidth <= 600">
+      <img button
+           [src]="port.images.fractal.smallImg[1]"
+           (click)="this.images.openFullViewWithFullHeight('/assets/images/portfolio/moi/2-small.jpg', true)">
+      <img button
+           [src]="port.images.fractal.smallImg[2]"
+           (click)="this.images.openFullViewWithFullHeight('/assets/images/portfolio/moi/3-small.jpg', true)">
+      <img button
+           [src]="port.images.fractal.smallImg[3]"
+           (click)="this.images.openFullViewWithFullHeight('/assets/images/portfolio/moi/4-small.jpg', true)">
+      <img button
+           [src]="port.images.fractal.smallImg[4]"
+           (click)="this.images.openFullViewWithFullHeight('/assets/images/portfolio/moi/5-small.jpg', true)">
+      <img button
+           [src]="port.images.fractal.smallImg[5]"
+           (click)="this.images.openFullViewWithFullHeight('/assets/images/portfolio/moi/6-small.jpg', true)">
+    </ion-row>
+    <ion-row class="layout-five-images" *ngIf="viewportWidth > 600">
+      <img button src="/assets/images/portfolio/moi/gif/1.gif" (click)="this.images.openFullViewWithFullHeight('/assets/images/portfolio/moi/gif/1.gif', true)">
+      <img button src="/assets/images/portfolio/moi/gif/5.gif" (click)="this.images.openFullViewWithFullHeight('/assets/images/portfolio/moi/gif/5.gif', true)">
+      <img button src="/assets/images/portfolio/moi/gif/4.gif" (click)="this.images.openFullViewWithFullHeight('/assets/images/portfolio/moi/gif/4.gif', true)">
+      <img button src="/assets/images/portfolio/moi/gif/2.gif" (click)="this.images.openFullViewWithFullHeight('/assets/images/portfolio/moi/gif/2.gif', true)">
+      <img button src="/assets/images/portfolio/moi/gif/3.gif" (click)="this.images.openFullViewWithFullHeight('/assets/images/portfolio/moi/gif/3.gif', true)">
+    </ion-row>
+    <app-layout-big-img  *ngIf="viewportWidth > 600" image="/assets/images/portfolio/moi/gif/6.gif"></app-layout-big-img>
+    <ng-container *ngIf="viewportWidth > 600">
+      <app-layout-big-img image="/assets/images/portfolio/moi/7.jpg"></app-layout-big-img>
+      <app-layout-big-img image="/assets/images/portfolio/moi/8.jpg"></app-layout-big-img>
+      <app-layout-big-img image="/assets/images/portfolio/moi/1.jpg"></app-layout-big-img>
+      <app-layout-big-img image="/assets/images/portfolio/moi/9.jpg"></app-layout-big-img>
+    </ng-container>
+
+    <ion-row class="layout-five-images" *ngIf="viewportWidth <= 600">
+      <img button src="/assets/images/portfolio/moi/gif/1.gif" (click)="this.images.openFullView('/assets/images/portfolio/moi/gif/1.gif')">
+      <img button src="/assets/images/portfolio/moi/gif/5.gif" (click)="this.images.openFullView('/assets/images/portfolio/moi/gif/5.gif')">
+      <img button src="/assets/images/portfolio/moi/gif/4.gif" (click)="this.images.openFullView('/assets/images/portfolio/moi/gif/4.gif')">
+      <img button src="/assets/images/portfolio/moi/gif/2.gif" (click)="this.images.openFullView('/assets/images/portfolio/moi/gif/2.gif')">
+      <img button src="/assets/images/portfolio/moi/gif/3.gif" (click)="this.images.openFullView('/assets/images/portfolio/moi/gif/3.gif')">
+    </ion-row>
+    <app-projects-navigation currentProject="fractal"></app-projects-navigation>
+    <app-footer></app-footer>
+  </main>
+
+
+</ion-content>

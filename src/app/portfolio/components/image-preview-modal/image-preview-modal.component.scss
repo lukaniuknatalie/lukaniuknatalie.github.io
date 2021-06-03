@@ -1,0 +1,38 @@
+:host{
+  ion-row{
+    height: 100%;
+    background: var(--ion-color-primary);
+    align-content: center;
+    justify-content: center;
+    position: relative;
+    &.larger{
+      overflow: scroll;
+      justify-content: end;
+    }
+    img{
+      width: 100%;
+      height: fit-content;
+      &.full-height{
+        height: 100%;
+        width: auto;
+      }
+      &.larger{
+        width: 1920px;
+        height: auto;
+        max-width: none;
+      }
+    }
+  }
+  ion-button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    &#zoom-out-btn{
+      display: none;
+    }
+    svg{
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+}

@@ -1,0 +1,120 @@
+:host{
+ion-content{
+  main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    min-height: calc(100vh - 5rem - 13.45rem);//minus header and footer height
+    justify-content: center;
+    & > ion-row{
+      max-width: 900px;
+      justify-content: center;
+      margin-bottom: 30px;
+      & > ion-row{
+        width: 100%;
+        ion-col{
+          &:first-child{
+            font-weight: 700;
+            font-size: 1.25rem;
+            min-width: 5.9rem;
+            h1{
+              font-size: 4rem;
+              font-weight: 700;
+              margin-bottom: 30px;
+            }
+          }
+          &:nth-child(2){
+            min-width: 19.44rem;
+            a, p{
+              color: white;
+              font-size: 1rem;
+              line-height: 1.6rem;
+            }
+            a{
+              //display: block;
+              text-decoration: none;
+              &:first-of-type{
+                margin-top: 17px;
+              }
+            }
+          }
+          & > ion-row{
+            flex-direction: column;
+          }
+        }
+      }
+    }
+  }
+}
+  @media (max-height: 1200px){
+    ion-content{
+      main{
+        min-height: 880px;
+      }
+    }
+  }
+  @media (max-width: 1000px){
+    ion-content{
+      main{
+        & > ion-row{
+          max-width: 90%;
+
+        }
+      }
+    }
+  }
+  @media (max-width: 750px){
+    ion-content{
+      main{
+        min-height: 885px;
+        & > ion-row{
+          & > ion-row{
+            ion-col:first-child{
+              h1{
+                font-size: 3rem;
+                margin-bottom: 0px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 480px){
+    ion-content{
+      main{
+        min-height: 950px;
+        & > ion-row{
+          & > ion-row{
+            ion-col{
+              &:first-child{
+                h1{
+                  font-size: 2.5rem;
+                }
+              }
+              p{
+                margin-bottom: 0px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 380px){
+    ion-content{
+      main{
+        & > ion-row{
+          & > ion-row{
+            ion-col{
+              &:nth-child(2){
+                min-width: 90vw;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

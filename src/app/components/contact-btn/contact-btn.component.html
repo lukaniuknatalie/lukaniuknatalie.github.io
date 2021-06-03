@@ -1,0 +1,19 @@
+<ion-fab vertical="bottom" horizontal="end" slot="fixed" >
+  <ion-fab-button closeIcon="close-outline">
+    <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+  </ion-fab-button>
+  <ion-fab-list side="top">
+    <ion-fab-button href="tel:+380677003822" *ngIf="viewportWidth <= 600">
+      <ion-icon name="call-outline"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-button href="mailto:info@legion-studio.com">
+      <ion-icon name="mail-outline"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-button href="mailto:info@legion-studio.com">
+      <ion-icon name="paper-plane-outline"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-button href="mailto:info@legion-studio.com">
+      <ion-icon name="logo-whatsapp"></ion-icon>
+    </ion-fab-button>
+  </ion-fab-list>
+</ion-fab>

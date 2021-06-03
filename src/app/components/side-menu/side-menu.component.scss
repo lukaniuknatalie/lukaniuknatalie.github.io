@@ -1,0 +1,17 @@
+:host{
+  height: 100%;
+  .wrapper{
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    background: var(--ion-color-primary-contrast);
+    ion-item{
+      ion-label{
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        color: var(--ion-color-primary);
+        font-weight: 700;
+      }
+    }
+  }
+}

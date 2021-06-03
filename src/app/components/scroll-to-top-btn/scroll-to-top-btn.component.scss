@@ -1,0 +1,9 @@
+:host{
+  ion-fab{
+    position: fixed;
+    ion-fab-button{
+      --background: var(--ion-color-primary-contrast);
+      --color: white;
+    }
+  }
+}

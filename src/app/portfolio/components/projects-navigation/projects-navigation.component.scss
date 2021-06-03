@@ -1,0 +1,12 @@
+:host{
+  width: 100%;
+  ion-row{
+    height: 140px;
+    align-items: center;
+    ion-button{
+      color: var(--ion-color-primary-contrast);
+      font-size: 17px;
+      font-weight: 700;
+    }
+  }
+}

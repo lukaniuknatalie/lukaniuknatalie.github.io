@@ -1,0 +1,11 @@
+<ion-row class="wrapper" [class.right]="bigImageRightSide">
+  <ion-row>
+    <img *ngIf="bigIsVideo === false" button [src]="bigImage" (click)="this.images.openFullView(bigImage)">
+    <ng-container *ngIf="bigIsVideo === true"><ng-content></ng-content></ng-container>
+  </ion-row>
+  <ion-row>
+    <img button [src]="smallTopImage" (click)="this.images.openFullView(smallTopImage)">
+    <img button [src]="smallBottomImage" (click)="this.images.openFullView(smallBottomImage)">
+  </ion-row>
+</ion-row>
+

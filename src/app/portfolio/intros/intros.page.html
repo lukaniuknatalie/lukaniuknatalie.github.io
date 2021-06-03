@@ -1,0 +1,84 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <app-header></app-header>
+</ion-header>
+
+<ion-content [fullscreen]="true"
+             [scrollEvents]="true"
+             (ionScroll)="scroll.logScrolling($event)"
+             color="primary">
+  <app-contact-btn></app-contact-btn>
+  <app-scroll-to-top-btn [content]="content"></app-scroll-to-top-btn>
+  <main>
+    <ion-row id="marker"></ion-row>
+    <ion-row class="decorative-header"></ion-row>
+    <app-client-description project="volt"></app-client-description>
+
+    <app-layout-big-img-two-small
+      smallTopImage="/assets/images/portfolio/intros/17.jpg"
+      smallBottomImage="/assets/images/portfolio/intros/16.jpg"
+      [bigImageRightSide]="false"
+      [bigIsVideo]="true">
+      <iframe width="100%"
+              src="https://www.youtube.com/embed/4dgCuntuFxo"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+    </app-layout-big-img-two-small>
+
+    <app-layout-big-img-two-small
+      bigImage="/assets/images/portfolio/intros/12.jpg"
+      smallTopImage="/assets/images/portfolio/intros/14.jpg"
+      smallBottomImage="/assets/images/portfolio/intros/15.jpg"
+      [bigImageRightSide]="true"
+      [bigIsVideo]="false">
+    </app-layout-big-img-two-small>
+
+    <app-layout-big-img-two-small
+      smallTopImage="/assets/images/portfolio/intros/11.jpg"
+      smallBottomImage="/assets/images/portfolio/intros/10.jpg"
+      [bigImageRightSide]="false"
+      [bigIsVideo]="true">
+      <iframe width="100%"
+              src="https://www.youtube.com/embed/D10Qb3PNeI0"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+    </app-layout-big-img-two-small>
+
+    <app-layout-big-img-two-small
+      bigImage="/assets/images/portfolio/intros/5.jpg"
+      smallTopImage="/assets/images/portfolio/intros/9.jpg"
+      smallBottomImage="/assets/images/portfolio/intros/13.jpg"
+      [bigImageRightSide]="true"
+      [bigIsVideo]="false">
+    </app-layout-big-img-two-small>
+
+    <app-layout-big-img-two-small
+      bigImage="/assets/images/portfolio/intros/1.jpg"
+      smallTopImage="/assets/images/portfolio/intros/3.jpg"
+      smallBottomImage="/assets/images/portfolio/intros/2.jpg"
+      [bigImageRightSide]="false"
+      [bigIsVideo]="false">
+    </app-layout-big-img-two-small>
+
+    <app-layout-big-img
+      image="/assets/images/portfolio/intros/4.jpg">
+    </app-layout-big-img>
+
+    <ion-row style="width: 100vw; height: 57.96vw">
+      <iframe width="100%"
+
+              src="https://www.youtube.com/embed/XeQnl3kJbXI"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+    </ion-row>
+
+    <app-projects-navigation currentProject="volt"></app-projects-navigation>
+    <app-footer></app-footer>
+  </main>
+
+
+
+</ion-content>

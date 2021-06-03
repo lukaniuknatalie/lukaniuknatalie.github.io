@@ -1,0 +1,42 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <app-header></app-header>
+</ion-header>
+
+<ion-content [fullscreen]="true"
+             [scrollEvents]="true"
+             (ionScroll)="scroll.logScrolling($event)"
+             color="primary">
+  <app-contact-btn></app-contact-btn>
+  <app-scroll-to-top-btn [content]="content"></app-scroll-to-top-btn>
+  <main>
+    <ion-row id="marker"></ion-row>
+    <ion-row class="decorative-header"></ion-row>
+    <app-client-description project="rokoko"></app-client-description>
+
+    <app-layout-big-img-two-small
+      bigImage="/assets/images/portfolio/rococo/6.jpg"
+      smallTopImage="/assets/images/portfolio/rococo/7.jpg"
+      smallBottomImage="/assets/images/portfolio/rococo/5.jpg"
+      [bigImageRightSide]="false"
+      [bigIsVideo]="false">
+    </app-layout-big-img-two-small>
+
+    <app-layout-big-img-two-small
+      bigImage="/assets/images/portfolio/rococo/4.jpg"
+      smallTopImage="/assets/images/portfolio/rococo/2.jpg"
+      smallBottomImage="/assets/images/portfolio/rococo/3.jpg"
+      [bigImageRightSide]="true"
+      [bigIsVideo]="false">
+    </app-layout-big-img-two-small>
+
+    <app-layout-big-img
+      image="/assets/images/portfolio/rococo/1.jpg">
+    </app-layout-big-img>
+
+    <app-projects-navigation currentProject="rokoko"></app-projects-navigation>
+    <app-footer></app-footer>
+  </main>
+
+
+
+</ion-content>

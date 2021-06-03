@@ -1,0 +1,26 @@
+:host{
+  main{
+    .decorative-header{
+      background-image: url("/assets/images/portfolio/moi/1.jpg");
+      background-position: center;
+    }
+    .layout-five-images{
+      img{
+        width: 20%;
+        cursor: zoom-in;
+      }
+    }
+  }
+  @media (max-width: 600px){
+    main{
+      .decorative-header{
+        background-image: url("/assets/images/portfolio/moi/1-small.jpg");
+      }
+      .layout-five-images{
+        img{
+          width: 100%;
+        }
+      }
+    }
+  }
+}

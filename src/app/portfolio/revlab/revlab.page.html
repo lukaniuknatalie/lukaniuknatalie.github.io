@@ -1,0 +1,49 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <app-header></app-header>
+</ion-header>
+
+<ion-content [fullscreen]="true"
+             [scrollEvents]="true"
+             (ionScroll)="scroll.logScrolling($event)"
+             color="primary">
+  <app-contact-btn></app-contact-btn>
+  <app-scroll-to-top-btn [content]="content"></app-scroll-to-top-btn>
+  <main>
+    <ion-row id="marker"></ion-row>
+    <ion-row class="decorative-header"></ion-row>
+    <app-client-description project="revlab"></app-client-description>
+    <app-layout-big-img-two-small
+      bigImage="/assets/images/portfolio/revlab/6.jpg"
+      smallTopImage="/assets/images/portfolio/revlab/6.jpg"
+      smallBottomImage="/assets/images/portfolio/revlab/5.jpg"
+      [bigImageRightSide]="false"
+      [bigIsVideo]="true">
+      <iframe width="100%"
+              src="https://www.youtube.com/embed/fAO-sslEpi8"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+    </app-layout-big-img-two-small>
+
+    <app-layout-big-img-two-small
+      bigImage="/assets/images/portfolio/revlab/2.jpg"
+      smallTopImage="/assets/images/portfolio/revlab/3.jpg"
+      smallBottomImage="/assets/images/portfolio/revlab/1.jpg"
+      [bigImageRightSide]="true"
+      [bigIsVideo]="false">
+    </app-layout-big-img-two-small>
+
+    <app-layout-big-img
+    image="/assets/images/portfolio/revlab/4.jpg">
+    </app-layout-big-img>
+
+    <app-layout-big-img
+      image="/assets/images/portfolio/revlab/7.jpg">
+    </app-layout-big-img>
+
+    <app-projects-navigation currentProject="revlab"></app-projects-navigation>
+    <app-footer></app-footer>
+  </main>
+
+</ion-content>
